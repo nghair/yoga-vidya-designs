@@ -1,0 +1,44 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  .card {
+    // $width: 500px;
+    $height: 40vh;
+    margin: 2.5vh;
+    border-radius: 15px;
+    width: $height * 1.75;
+    height: $height;
+
+    background: url("https://sketchfav.com/imgs/free-sketch-ui-kits/0x0_hospital-performance-dashboard-demo-ftribe.png");
+    background-size: cover;
+
+    .inner {
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #ffffff, $alpha: 0.4);
+      backdrop-filter: blur(3px);
+
+      border-radius: inherit;
+
+      font-size: 4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: color 0.1s, background-color 0.1s, backdrop-filter 0.1s;
+    }
+
+    .inner:hover {
+      cursor: pointer;
+      color: transparent;
+      backdrop-filter: blur(0);
+
+      transition: color 0.1s, background-color 0.1s, backdrop-filter 0.1s;
+    }
+  }
+}

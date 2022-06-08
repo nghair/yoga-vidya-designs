@@ -1,0 +1,7 @@
+<div class="container yellow-transparent">
+  <div *ngFor="let design of designs" class="card" [routerLink]="design + ''">
+    <div class="inner">
+      {{ design }}
+    </div>
+  </div>
+</div>

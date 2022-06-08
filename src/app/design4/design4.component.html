@@ -1,0 +1,32 @@
+<div class="header flex-space-around">
+  <div *ngFor="let logo of logos" class="logo">LOGO</div>
+</div>
+
+<div class="infos flex-space-between">
+  <div>• • • •</div>
+  <div *ngFor="let info of infos" class="info">Info {{ info }}</div>
+  <div class="search flex-space-between">
+    <div>Search</div>
+    <img src="../../assets/search-512.webp" alt="Search-Icon" />
+  </div>
+</div>
+
+<div class="categories">
+  <div *ngFor="let category of categoriesL" class="category-l flex-center">
+    Category
+  </div>
+  <div *ngFor="let category of categoriesM" class="category-m flex-center">
+    Category
+  </div>
+  <div *ngFor="let category of categoriesS" class="category-s flex-center">
+    Category
+  </div>
+</div>
+
+<div class="products flex-center">
+  <div *ngFor="let product of products" class="product flex-center">
+    Product
+  </div>
+</div>
+
+<div class="footer flex-center">Standard Bottom Info</div>
