@@ -1,0 +1,104 @@
+$header-height: 60px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  justify-items: stretch;
+  margin-top: $header-height;
+  background-color: #a00839;
+
+  .header {
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: $header-height;
+    padding: 0 15px;
+    border-bottom: 1px solid black;
+
+    .logo {
+      padding: 5px 30px;
+      border: 1px solid black;
+    }
+
+    .burger-menu:hover {
+      cursor: pointer;
+    }
+  }
+
+  .infos {
+    margin: 10px;
+    padding: 5px 10px;
+    border: 1px solid black;
+
+    .search {
+      width: 10vw;
+      min-width: 150px;
+      border: 1px solid black;
+      padding: 2px 5px;
+
+      img {
+        width: 15px;
+      }
+    }
+  }
+
+  .categories {
+    $margin: 10px;
+    // margin: $margin;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    margin: $margin $margin 0 0;
+
+    .category {
+      $size: 45vw;
+      $min-size: 140px;
+      width: $size;
+      min-width: $min-size;
+      height: $size;
+      min-height: $min-size;
+      margin: 0 0 $margin $margin;
+
+      box-sizing: border-box;
+      border: 1px solid black;
+    }
+
+    // .category.show-all:not(:first-child) {
+    .category.hide-some:not(:nth-child(-n + 4)) {
+      display: none;
+    }
+  }
+
+  .show-all-categories {
+    padding: 5px;
+    margin: 0 10px 10px 10px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(#feca1a, 0.8);
+    }
+  }
+
+  .products {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    flex-wrap: wrap;
+    padding: 0 100px;
+
+    .product {
+      border: 1px solid black;
+      width: 300px;
+      height: 300px;
+      margin: 30px;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 200px;
+  }
+}

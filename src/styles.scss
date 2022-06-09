@@ -1,3 +1,7 @@
+* {
+  font-family: Geneva, Arial, sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -23,6 +27,7 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .flex-space-around {

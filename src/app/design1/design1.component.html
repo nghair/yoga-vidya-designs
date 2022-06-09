@@ -1,1 +1,43 @@
-<p>design1 works!</p>
+<div class="container">
+  <div class="header flex-space-between yellow">
+    <!-- <div *ngFor="let logo of logos" class="logo">LOGO</div> -->
+    <span>Yoga Vidya Online Shop</span>
+    <div class="burger-menu"><i class="fa-solid fa-bars fa-lg"></i></div>
+  </div>
+
+  <!-- <div class="infos flex-space-between">
+    <div>• • • •</div>
+    <div *ngFor="let info of infos" class="info">Info {{ info }}</div>
+    <div class="search flex-space-between">
+      <div>Search</div>
+      <img src="../../assets/search-512.webp" alt="Search-Icon" />
+    </div>
+  </div> -->
+
+  <div class="categories flex-center">
+    <div
+      *ngFor="let category of categories"
+      class="category flex-center"
+      [class]="{ 'hide-some': !showAllCategories }"
+    >
+      {{ category }}
+    </div>
+  </div>
+
+  <div
+    class="show-all-categories flex-center yellow"
+    (click)="showAllCategories = !showAllCategories"
+  >
+    {{
+      showAllCategories ? "Kategorien einklappen" : "Alle Kategorien anzeigen"
+    }}
+  </div>
+
+  <div class="products flex-center">
+    <div *ngFor="let product of products" class="product flex-center">
+      Product
+    </div>
+  </div>
+
+  <div class="footer flex-center">Standard Bottom Info</div>
+</div>
