@@ -1,8 +1,8 @@
 export const categories = [
-  'Musikfestival',
+  { name: 'Musikfestival' },
   'Yoga Kongress',
   'Gutscheine',
-  'Yoga Vidya Verlag',
+  { name: 'Yoga Vidya Verlag', unterkategorien: ['Bücher', 'E-Books'] },
   'E-Books',
   'Bücher',
   'Bestseller',
