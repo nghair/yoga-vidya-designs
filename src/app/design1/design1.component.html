@@ -1,9 +1,31 @@
-<div class="container red">
+<div class="container">
   <div class="header flex-space-between yellow">
     <!-- <div *ngFor="let logo of logos" class="logo">LOGO</div> -->
     <span>Yoga Vidya Online Shop</span>
-    <div class="burger-menu">
+    <div class="burger-menu" (click)="showSidebar = true">
       <fa-icon [icon]="faBars" size="lg"></fa-icon>
+    </div>
+
+    <div
+      class="backdrop"
+      [style]="{ width: showSidebar ? '100vw' : '0' }"
+      (click)="showSidebar = false"
+    >
+      <div class="sidebar yellow" (click)="$event.stopPropagation()">
+        <div class="listing">
+          <div class="search flex-space-between">
+            <div>Search</div>
+            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+          </div>
+          <a>Einloggen</a>
+          <a>Ihr Konto</a>
+          <a>Alle Kategorien</a>
+          <a>Über uns</a>
+          <div class="cart">
+            <fa-icon [icon]="faShoppingCart"></fa-icon> &nbsp; 3,99 €
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -16,7 +38,7 @@
     </div>
   </div> -->
 
-  <div class="categories flex-center">
+  <div class="categories red flex-center">
     <div
       *ngFor="let category of categories"
       class="category flex-center"
@@ -26,18 +48,22 @@
     </div>
   </div>
 
-  <div
-    class="show-all-categories flex-center yellow"
-    (click)="showAllCategories = !showAllCategories"
-  >
-    {{
-      showAllCategories ? "Kategorien einklappen" : "Alle Kategorien anzeigen"
-    }}
+  <div class="red">
+    <div
+      class="show-all-categories flex-center yellow"
+      (click)="showAllCategories = !showAllCategories"
+    >
+      {{
+        showAllCategories ? "Kategorien einklappen" : "Alle Kategorien anzeigen"
+      }}
+    </div>
   </div>
 
-  <div class="products flex-center">
-    <div *ngFor="let product of products" class="product flex-center">
-      Product
+  <div class="products flex-center red-text">
+    <div *ngFor="let product of products" class="product-container">
+      <div class="product">Product</div>
+      <span>Das große Yoga Vidya Hatha Yoga Buch</span>
+      <span>3,99 €</span>
     </div>
   </div>
 

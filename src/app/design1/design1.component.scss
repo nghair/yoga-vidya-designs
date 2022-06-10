@@ -6,7 +6,6 @@ $header-height: 60px;
   justify-content: stretch;
   justify-items: stretch;
   margin-top: $header-height;
-  background-color: #a00839;
 
   .header {
     position: fixed;
@@ -25,22 +24,82 @@ $header-height: 60px;
     .burger-menu:hover {
       cursor: pointer;
     }
+
+    .backdrop {
+      z-index: 10;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      right: 0;
+      top: 0;
+      overflow: hidden;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      backdrop-filter: blur(2px);
+      transition: width 0.2s;
+
+      .sidebar {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 70vw;
+        transition: width 0.5s;
+        padding: 10px;
+
+        .listing {
+          display: flex;
+          flex-direction: column;
+
+          .search {
+            margin-bottom: 10px;
+          }
+
+          .cart {
+            margin-top: 10px;
+            font-size: 1.2em;
+          }
+
+          a {
+            padding: 4px 10px;
+            transition: color 0.1s, background-color 0.1s;
+
+            &,
+            &:active,
+            &:focus,
+            &:visited {
+              text-decoration: none;
+              color: #a00839;
+            }
+
+            &:not(:nth-of-type(-n + 1)) {
+              border-top: 1px solid rgba($color: #a00839, $alpha: 0.7);
+            }
+
+            &:hover {
+              color: #feca1a;
+              background-color: #a00839;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
   }
 
   .infos {
     margin: 10px;
     padding: 5px 10px;
     border: 1px solid black;
+  }
 
-    .search {
-      width: 10vw;
-      min-width: 150px;
-      border: 1px solid black;
-      padding: 2px 5px;
+  .search {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 150px;
+    border: 1px solid #a00839;
+    padding: 4px 10px;
 
-      img {
-        width: 15px;
-      }
+    img {
+      width: 15px;
     }
   }
 
@@ -81,23 +140,46 @@ $header-height: 60px;
   }
 
   .products {
+    box-sizing: border-box;
     $margin: 10px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     flex-wrap: wrap;
+    align-items: flex-start;
     padding: $margin $margin 0 0;
 
-    .product {
-      $size: 45vw;
+    .product-container {
+      $size: 44vw;
       $min-size: 140px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2 * $margin;
       width: $size;
-      min-width: $min-size;
-      height: $size;
-      min-height: $min-size;
       margin: 0 0 $margin $margin;
 
-      box-sizing: border-box;
-      border: 1px solid black;
+      transition: color 0.2s, background-color 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: #feca1a;
+        background-color: #a00839;
+      }
+
+      .product {
+        width: $size;
+        min-width: $min-size;
+        height: $size;
+        min-height: $min-size;
+        margin-bottom: 2px;
+
+        border: 1px solid black;
+      }
+
+      span:nth-of-type(2) {
+        margin-top: 3px;
+        font-size: 1.05em;
+        font-weight: bold;
+      }
     }
   }
 

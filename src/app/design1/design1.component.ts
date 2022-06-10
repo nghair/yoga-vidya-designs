@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faMagnifyingGlass,
+  faShoppingCart,
+} from '@fortawesome/free-solid-svg-icons';
 import { categories } from '../../assets/categories';
 
 @Component({
@@ -9,6 +13,8 @@ import { categories } from '../../assets/categories';
 })
 export class Design1Component {
   faBars = faBars;
+  faMagnifyingGlass = faMagnifyingGlass;
+  faShoppingCart = faShoppingCart;
   logos = [1, 2, 3, 4];
   infos = [1, 2, 3, 4, 5];
   // categoriesL = [1, 2];
@@ -18,4 +24,5 @@ export class Design1Component {
   categories = categories;
 
   showAllCategories = false;
+  showSidebar = false;
 }
