@@ -1,8 +1,10 @@
-<div class="container">
+<div class="container red">
   <div class="header flex-space-between yellow">
     <!-- <div *ngFor="let logo of logos" class="logo">LOGO</div> -->
     <span>Yoga Vidya Online Shop</span>
-    <div class="burger-menu"><i class="fa-solid fa-bars fa-lg"></i></div>
+    <div class="burger-menu">
+      <fa-icon [icon]="faBars" size="lg"></fa-icon>
+    </div>
   </div>
 
   <!-- <div class="infos flex-space-between">
@@ -39,5 +41,7 @@
     </div>
   </div>
 
-  <div class="footer flex-center">Standard Bottom Info</div>
+  <div class="footer yellow">
+    <app-footer></app-footer>
+  </div>
 </div>

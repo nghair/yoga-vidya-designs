@@ -1,0 +1,58 @@
+<div class="container">
+  <ng-container *ngFor="let ctrl of control">
+    <div class="click-me" (click)="ctrl.open = !ctrl.open">
+      <fa-icon *ngIf="ctrl.open" [icon]="faAngleUp"></fa-icon>
+      <fa-icon *ngIf="!ctrl.open" [icon]="faAngleDown"></fa-icon>
+      <span>{{ ctrl.name }}</span>
+    </div>
+
+    <ng-container *ngIf="ctrl.open" [ngTemplateOutlet]="ctrl.ref">
+    </ng-container>
+  </ng-container>
+
+  <ng-template #os>
+    <div class="listing">
+      <a href="https://shop.yoga-vidya.de/de/versand">Versand</a>
+      <a href="https://shop.yoga-vidya.de/de/kontakt">Kontakt</a>
+      <a href="https://shop.yoga-vidya.de/de/zahlungsarten">Zahlungsarten</a>
+      <a href="https://shop.yoga-vidya.de/de/sitemap">Sitemap</a>
+    </div>
+  </ng-template>
+
+  <ng-template #ser>
+    <div class="listing">
+      <a href="https://shop.yoga-vidya.de/de/agb">AGB</a>
+      <a href="https://shop.yoga-vidya.de/de/widerrufsrecht">Widerrufsrecht</a>
+      <a href="https://shop.yoga-vidya.de/de/privatsphaere-und-datenschutz">
+        Datenschutz
+      </a>
+      <a href="https://shop.yoga-vidya.de/de/impressum">Impressum</a>
+    </div>
+  </ng-template>
+
+  <ng-template #za>
+    <div class="icons">
+      <img src="../../assets/images/xt_paypal.jpg" />
+      <img src="../../assets/images/xt_banktransfer.jpg" />
+      <img src="../../assets/images/xt_invoice.jpg" />
+      <img src="../../assets/images/xt_sofortueberweisung.jpg" />
+    </div>
+  </ng-template>
+
+  <ng-template #se>
+    <div class="icons">
+      <img src="../../assets/images/trustmark_120x120.png" />
+    </div>
+  </ng-template>
+
+  <ng-template #fu>
+    <div class="icons">
+      <img src="../../assets/images/icon_facebook.png" />
+      <img src="../../assets/images/icon_twitter.png" />
+      <img src="../../assets/images/icon_instagram.png" />
+      <img src="../../assets/images/icon_youtube.png" />
+      <img src="../../assets/images/icon_blogger.png" />
+      <img src="../../assets/images/icon_mein_yv.png.gif" />
+    </div>
+  </ng-template>
+</div>

@@ -8,6 +8,8 @@ import { Design2Component } from './design2/design2.component';
 import { Design3Component } from './design3/design3.component';
 import { Design4Component } from './design4/design4.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     Design2Component,
     Design3Component,
     Design4Component,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

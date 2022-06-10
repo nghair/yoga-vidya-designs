@@ -1,0 +1,58 @@
+.container {
+  padding: 10px;
+
+  .click-me {
+    font-size: 1.2em;
+    font-weight: bold;
+
+    span {
+      margin-left: 7px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .listing {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding: 4px 10px;
+      transition: color 0.1s, background-color 0.1s;
+
+      &,
+      &:active,
+      &:focus,
+      &:visited {
+        text-decoration: none;
+        color: #a00839;
+      }
+
+      &:not(:nth-child(-n + 1)) {
+        border-top: 1px solid rgba($color: #a00839, $alpha: 0.7);
+      }
+
+      &:hover {
+        color: #feca1a;
+        background-color: #a00839;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+      height: 35px;
+      margin: 5px 2px;
+    }
+  }
+}

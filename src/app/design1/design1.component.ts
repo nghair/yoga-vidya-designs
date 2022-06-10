@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { categories } from '../../assets/categories';
 
 @Component({
@@ -7,6 +8,7 @@ import { categories } from '../../assets/categories';
   styleUrls: ['./design1.component.scss'],
 })
 export class Design1Component {
+  faBars = faBars;
   logos = [1, 2, 3, 4];
   infos = [1, 2, 3, 4, 5];
   // categoriesL = [1, 2];
