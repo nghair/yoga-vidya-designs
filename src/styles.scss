@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 * {
   font-family: Geneva, Arial, sans-serif;
 }
@@ -7,25 +9,30 @@ body {
 }
 
 .yellow-text {
-  color: #feca1a;
+  color: $secondary;
 }
 
 .yellow-transparent {
-  background-color: rgba(#feca1a, 0.8);
+  background-color: rgba($secondary, 0.8);
 }
 
 .yellow {
-  background-color: #feca1a;
-  color: #a00839;
+  background-color: $secondary;
+  color: $primary;
+}
+
+.light-yellow {
+  background-color: rgba($color: $secondary, $alpha: 0.3);
+  color: $primary;
 }
 
 .red {
-  background-color: #a00839;
-  color: #feca1a;
+  background-color: $primary;
+  color: $secondary;
 }
 
 .red-text {
-  color: #a00839;
+  color: $primary;
 }
 
 .flex {

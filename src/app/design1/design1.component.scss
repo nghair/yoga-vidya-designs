@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 $header-height: 60px;
 
 .container {
@@ -50,16 +52,17 @@ $header-height: 60px;
           flex-direction: column;
 
           .search {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
           }
 
           .cart {
-            margin-top: 10px;
+            margin: 20px 0 0 10px;
             font-size: 1.2em;
           }
 
           a {
-            padding: 4px 10px;
+            padding: 10px 10px;
             transition: color 0.1s, background-color 0.1s;
 
             &,
@@ -67,16 +70,16 @@ $header-height: 60px;
             &:focus,
             &:visited {
               text-decoration: none;
-              color: #a00839;
+              color: $primary;
             }
 
             &:not(:nth-of-type(-n + 1)) {
-              border-top: 1px solid rgba($color: #a00839, $alpha: 0.7);
+              border-top: 1px solid rgba($color: $primary, $alpha: 0.7);
             }
 
             &:hover {
-              color: #feca1a;
-              background-color: #a00839;
+              color: $secondary;
+              background-color: $primary;
               cursor: pointer;
             }
           }
@@ -95,7 +98,7 @@ $header-height: 60px;
     box-sizing: border-box;
     width: 100%;
     min-width: 150px;
-    border: 1px solid #a00839;
+    border: 1px solid $primary;
     padding: 4px 10px;
 
     img {
@@ -135,15 +138,13 @@ $header-height: 60px;
 
     &:hover {
       cursor: pointer;
-      background-color: rgba(#feca1a, 0.8);
+      background-color: rgba($secondary, 0.8);
     }
   }
 
   .products {
     box-sizing: border-box;
     $margin: 10px;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
     flex-wrap: wrap;
     align-items: flex-start;
     padding: $margin $margin 0 0;
@@ -161,8 +162,8 @@ $header-height: 60px;
 
       &:hover {
         cursor: pointer;
-        color: #feca1a;
-        background-color: #a00839;
+        color: $primary;
+        background-color: rgba($color: $secondary, $alpha: 0.3);
       }
 
       .product {
