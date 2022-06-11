@@ -1,6 +1,5 @@
 <div class="container">
   <div class="header flex-space-between yellow">
-    <!-- <div *ngFor="let logo of logos" class="logo">LOGO</div> -->
     <span>Yoga Vidya Online Shop</span>
     <div class="burger-menu" (click)="showSidebar = true">
       <fa-icon [icon]="faBars" size="lg"></fa-icon>
@@ -17,7 +16,7 @@
             <div>Search</div>
             <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
           </div>
-          <a>Einloggen</a>
+          <a>Ausloggen</a>
           <a>Ihr Konto</a>
           <a>Alle Kategorien</a>
           <a>Über uns</a>
@@ -29,14 +28,18 @@
     </div>
   </div>
 
-  <!-- <div class="infos flex-space-between">
+  <div class="infos flex-space-between">
     <div>• • • •</div>
-    <div *ngFor="let info of infos" class="info">Info {{ info }}</div>
+    <!-- <div *ngFor="let info of infos" class="info">Info {{ info }}</div> -->
+    <div class="info">Ausloggen</div>
+    <div class="info">Ihr Konto</div>
+    <div class="info">Alle Kategorien</div>
+    <div class="info">Über uns</div>
     <div class="search flex-space-between">
       <div>Search</div>
-      <img src="../../assets/search-512.webp" alt="Search-Icon" />
+      <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
     </div>
-  </div> -->
+  </div>
 
   <div class="categories light-yellow flex-center">
     <div
@@ -44,7 +47,11 @@
       class="category flex-center"
       [class]="{ 'hide-some': !showAllCategories }"
     >
-      {{ category }}
+      <!-- <img src="../../assets/images/pics/cats/Kategorie_Ayurveda.gif" /> -->
+
+      <span>
+        {{ category.name }}
+      </span>
     </div>
   </div>
 
