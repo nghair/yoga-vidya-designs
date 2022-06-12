@@ -46,9 +46,11 @@
       *ngFor="let category of categories"
       class="category flex-center"
       [class]="{ 'hide-some': !showAllCategories }"
+      [style]="{
+        'background-image':
+          'url(../../assets/images/pics/cats/aetherische&Aroma-oele/Kategorie_Aromaoele.gif)'
+      }"
     >
-      <!-- <img src="../../assets/images/pics/cats/Kategorie_Ayurveda.gif" /> -->
-
       <span>
         {{ category.name }}
       </span>
@@ -68,7 +70,11 @@
 
   <div class="products flex-center red-text">
     <div *ngFor="let product of products" class="product-container">
-      <div class="product">Product</div>
+      <div class="product">
+        <img
+          src="../../assets/images/pics/prods/buch-5-minuten-maerchen-brinkmeier.jpg"
+        />
+      </div>
       <span>Das große Yoga Vidya Hatha Yoga Buch</span>
       <span>3,99 €</span>
     </div>

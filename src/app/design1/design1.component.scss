@@ -92,11 +92,20 @@ $header-height: 60px;
       flex: 1 0 auto;
       box-sizing: border-box;
 
-      overflow: hidden;
       position: relative;
-      background-image: url("../../assets/images/pics/cats/Ätherische\ &\ Aroma-Öle/Kategorie_Aromaoele.gif");
       background-size: 150% auto;
       background-position: center;
+
+      transition: background-size 0.2s;
+
+      &:hover {
+        background-size: 160%;
+        cursor: pointer;
+
+        span {
+          background-color: rgba($color: $secondary, $alpha: 1);
+        }
+      }
 
       span {
         position: absolute;
@@ -104,6 +113,7 @@ $header-height: 60px;
         right: 0;
         bottom: 10%;
         background-color: rgba($color: $secondary, $alpha: 0.7);
+        transition: background-color 0.1s, font-size 0.1s, height 0.1s;
       }
     }
   }
@@ -116,48 +126,6 @@ $header-height: 60px;
     &:hover {
       cursor: pointer;
       background-color: rgba($primary, 0.9);
-    }
-  }
-
-  .products {
-    box-sizing: border-box;
-    $margin: 10px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: $margin $margin 0 0;
-
-    .product-container {
-      $size: 44vw;
-      $min-size: 140px;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 2 * $margin;
-      width: $size;
-      margin: 0 0 $margin $margin;
-
-      transition: color 0.2s, background-color 0.2s;
-
-      &:hover {
-        cursor: pointer;
-        color: $primary;
-        background-color: rgba($color: $secondary, $alpha: 0.3);
-      }
-
-      .product {
-        width: $size;
-        min-width: $min-size;
-        height: $size;
-        min-height: $min-size;
-        margin-bottom: 2px;
-
-        border: 1px solid black;
-      }
-
-      span:nth-of-type(2) {
-        margin-top: 3px;
-        font-size: 1.05em;
-        font-weight: bold;
-      }
     }
   }
 
@@ -199,6 +167,10 @@ $header-height: 60px;
       min-width: $min-size;
       height: $size;
       min-height: $min-size;
+
+      &:hover span {
+        font-size: 1.2em;
+      }
     }
 
     .category.hide-some:not(:nth-child(-n + 4)) {
@@ -208,6 +180,48 @@ $header-height: 60px;
 
   .show-all-categories {
     margin: 0 10px 10px 10px;
+  }
+
+  .products {
+    box-sizing: border-box;
+    $margin: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: $margin $margin 0 0;
+
+    .product-container {
+      $size: 44vw;
+      $min-size: 140px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2 * $margin;
+      width: $size;
+      margin: 0 0 $margin $margin;
+
+      transition: color 0.2s, background-color 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+        background-color: rgba($color: $secondary, $alpha: 0.3);
+      }
+
+      .product {
+        width: $size;
+        min-width: $min-size;
+        margin-bottom: 2px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      span:nth-of-type(2) {
+        margin-top: 3px;
+        font-size: 1.05em;
+        font-weight: bold;
+      }
+    }
   }
 }
 
@@ -265,11 +279,11 @@ $header-height: 60px;
       flex: 1 0 auto;
 
       box-sizing: border-box;
-      font-size: 1.5em;
+      // font-size: 1.5em;
 
       overflow: hidden;
       position: relative;
-      background-image: url("../../assets/images/pics/cats/Kategorie_Ayurveda.gif");
+      // background-image: url("../../assets/images/pics/cats/Kategorie_Ayurveda.gif");
       background-size: 150% auto;
       background-position: center;
 
@@ -279,6 +293,11 @@ $header-height: 60px;
         right: 0;
         bottom: 10%;
         background-color: rgba($color: $secondary, $alpha: 0.7);
+        font-size: 1.5em;
+      }
+
+      &:hover span {
+        font-size: 1.7em;
       }
 
       &:not(:nth-child(-n + 2)) {
@@ -286,7 +305,14 @@ $header-height: 60px;
         $height: 3 * $width / 4;
         width: $width;
         height: $height;
-        font-size: 1.2em;
+
+        span {
+          font-size: 1.2em;
+        }
+
+        &:hover span {
+          font-size: 1.4em;
+        }
       }
 
       &.hide-some:not(:nth-child(-n + 7)) {
@@ -297,5 +323,50 @@ $header-height: 60px;
 
   .show-all-categories {
     margin: 0 55px 10px 55px;
+  }
+
+  .products {
+    $space: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: $space;
+
+    .product-container {
+      $width: 44vw;
+      $min-width: 140px;
+      $max-width: 200px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4 * $space;
+      width: $width;
+      max-width: $max-width;
+      margin: $space;
+
+      transition: color 0.2s, background-color 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+        background-color: rgba($color: $secondary, $alpha: 0.3);
+      }
+
+      .product {
+        width: $width;
+        min-width: $min-width;
+        max-width: $max-width;
+        margin-bottom: 2px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      span:nth-of-type(2) {
+        margin-top: 3px;
+        font-size: 1.05em;
+        font-weight: bold;
+      }
+    }
   }
 }
