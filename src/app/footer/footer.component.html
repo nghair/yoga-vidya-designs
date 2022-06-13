@@ -1,58 +1,84 @@
 <div class="container">
-  <ng-container *ngFor="let ctrl of control">
-    <div class="click-me" (click)="ctrl.open = !ctrl.open">
-      <fa-icon *ngIf="ctrl.open" [icon]="faAngleUp"></fa-icon>
-      <fa-icon *ngIf="!ctrl.open" [icon]="faAngleDown"></fa-icon>
-      <span>{{ ctrl.name }}</span>
+  <div class="abschnitt">
+    <div class="heading" (click)="control[0].open = !control[0].open">
+      <fa-icon *ngIf="control[0].open" [icon]="faAngleUp"></fa-icon>
+      <fa-icon *ngIf="!control[0].open" [icon]="faAngleDown"></fa-icon>
+      <span>{{ control[0].name }}</span>
     </div>
-
-    <ng-container *ngIf="ctrl.open" [ngTemplateOutlet]="ctrl.ref">
-    </ng-container>
-  </ng-container>
-
-  <ng-template #os>
-    <div class="listing">
-      <a href="https://shop.yoga-vidya.de/de/versand">Versand</a>
-      <a href="https://shop.yoga-vidya.de/de/kontakt">Kontakt</a>
-      <a href="https://shop.yoga-vidya.de/de/zahlungsarten">Zahlungsarten</a>
-      <a href="https://shop.yoga-vidya.de/de/sitemap">Sitemap</a>
+    <div class="content" [class]="{ open: control[0].open }">
+      <div class="listing">
+        <a href="https://shop.yoga-vidya.de/de/versand">Versand</a>
+        <a href="https://shop.yoga-vidya.de/de/kontakt">Kontakt</a>
+        <a href="https://shop.yoga-vidya.de/de/zahlungsarten">Zahlungsarten</a>
+        <a href="https://shop.yoga-vidya.de/de/sitemap">Sitemap</a>
+      </div>
     </div>
-  </ng-template>
+  </div>
 
-  <ng-template #ser>
-    <div class="listing">
-      <a href="https://shop.yoga-vidya.de/de/agb">AGB</a>
-      <a href="https://shop.yoga-vidya.de/de/widerrufsrecht">Widerrufsrecht</a>
-      <a href="https://shop.yoga-vidya.de/de/privatsphaere-und-datenschutz">
-        Datenschutz
-      </a>
-      <a href="https://shop.yoga-vidya.de/de/impressum">Impressum</a>
+  <div class="abschnitt">
+    <div class="heading" (click)="control[1].open = !control[1].open">
+      <fa-icon *ngIf="control[1].open" [icon]="faAngleUp"></fa-icon>
+      <fa-icon *ngIf="!control[1].open" [icon]="faAngleDown"></fa-icon>
+      <span>{{ control[1].name }}</span>
     </div>
-  </ng-template>
+    <div class="content" [class]="{ open: control[1].open }">
+      <div class="listing">
+        <a href="https://shop.yoga-vidya.de/de/agb">AGB</a>
+        <a href="https://shop.yoga-vidya.de/de/widerrufsrecht"
+          >Widerrufsrecht</a
+        >
+        <a href="https://shop.yoga-vidya.de/de/privatsphaere-und-datenschutz">
+          Datenschutz
+        </a>
+        <a href="https://shop.yoga-vidya.de/de/impressum">Impressum</a>
+      </div>
+    </div>
+  </div>
 
-  <ng-template #za>
-    <div class="icons">
-      <img src="../../assets/images/xt_paypal.jpg" />
-      <img src="../../assets/images/xt_banktransfer.jpg" />
-      <img src="../../assets/images/xt_invoice.jpg" />
-      <img src="../../assets/images/xt_sofortueberweisung.jpg" />
+  <div class="abschnitt">
+    <div class="heading" (click)="control[2].open = !control[2].open">
+      <fa-icon *ngIf="control[2].open" [icon]="faAngleUp"></fa-icon>
+      <fa-icon *ngIf="!control[2].open" [icon]="faAngleDown"></fa-icon>
+      <span>{{ control[2].name }}</span>
     </div>
-  </ng-template>
+    <div class="content" [class]="{ open: control[2].open }">
+      <div class="icons">
+        <img src="../../assets/images/xt_paypal.jpg" />
+        <img src="../../assets/images/xt_banktransfer.jpg" />
+        <img src="../../assets/images/xt_invoice.jpg" />
+        <img src="../../assets/images/xt_sofortueberweisung.jpg" />
+      </div>
+    </div>
+  </div>
 
-  <ng-template #se>
-    <div class="icons">
-      <img src="../../assets/images/trustmark_120x120.png" />
+  <div class="abschnitt sicher-einkaufen">
+    <div class="heading" (click)="control[3].open = !control[3].open">
+      <fa-icon *ngIf="control[3].open" [icon]="faAngleUp"></fa-icon>
+      <fa-icon *ngIf="!control[3].open" [icon]="faAngleDown"></fa-icon>
+      <span>{{ control[3].name }}</span>
     </div>
-  </ng-template>
+    <div class="content" [class]="{ open: control[3].open }">
+      <div class="icons">
+        <img src="../../assets/images/trustmark_120x120.png" />
+      </div>
+    </div>
+  </div>
 
-  <ng-template #fu>
-    <div class="icons">
-      <img src="../../assets/images/icon_facebook.png" />
-      <img src="../../assets/images/icon_twitter.png" />
-      <img src="../../assets/images/icon_instagram.png" />
-      <img src="../../assets/images/icon_youtube.png" />
-      <img src="../../assets/images/icon_blogger.png" />
-      <img src="../../assets/images/icon_mein_yv.png.gif" />
+  <div class="abschnitt">
+    <div class="heading" (click)="control[4].open = !control[4].open">
+      <fa-icon *ngIf="control[4].open" [icon]="faAngleUp"></fa-icon>
+      <fa-icon *ngIf="!control[4].open" [icon]="faAngleDown"></fa-icon>
+      <span>{{ control[4].name }}</span>
     </div>
-  </ng-template>
+    <div class="content" [class]="{ open: control[4].open }">
+      <div class="icons">
+        <img src="../../assets/images/icon_facebook.png" />
+        <img src="../../assets/images/icon_twitter.png" />
+        <img src="../../assets/images/icon_instagram.png" />
+        <img src="../../assets/images/icon_youtube.png" />
+        <img src="../../assets/images/icon_blogger.png" />
+        <img src="../../assets/images/icon_mein_yv.png.gif" />
+      </div>
+    </div>
+  </div>
 </div>

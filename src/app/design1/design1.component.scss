@@ -135,7 +135,7 @@ $header-height: 60px;
   }
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: $small-screen) {
   .container {
     margin-top: $header-height;
   }
@@ -225,7 +225,7 @@ $header-height: 60px;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: $small-screen) {
   .backdrop,
   .burger-menu {
     display: none;
@@ -279,11 +279,8 @@ $header-height: 60px;
       flex: 1 0 auto;
 
       box-sizing: border-box;
-      // font-size: 1.5em;
 
-      overflow: hidden;
       position: relative;
-      // background-image: url("../../assets/images/pics/cats/Kategorie_Ayurveda.gif");
       background-size: 150% auto;
       background-position: center;
 
